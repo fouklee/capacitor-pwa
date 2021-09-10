@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "algotech-vision-push": {
+      "hosting": {
+        "app": [
+          "algotech-vision-push"
+        ]
+      }
+    }
+  }
+}

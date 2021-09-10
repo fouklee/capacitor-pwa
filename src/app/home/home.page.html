@@ -6,7 +6,9 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
+    <ion-button expand="full" (click)="requestPermission()">Request Permission</ion-button>
+    <ion-button expand="full" (click)="deleteToken()">Delete Token</ion-button>
 
     <ion-button (click)="takePicture()" expand="block">
         <ion-icon name="camera" slot="start"></ion-icon>
@@ -14,6 +16,11 @@
     </ion-button>
 
     <ion-img *ngIf="myImage" [src]="myImage"></ion-img>
+
+    <ion-button (click)="getCurrentPosition()" expand="block">
+        <ion-icon name="locate" slot="start"></ion-icon>
+        Get position
+    </ion-button>
 
     <!-- present the geolocation information -->
     <ion-card *ngIf="position">
